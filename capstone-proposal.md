@@ -13,9 +13,7 @@ Market segmentation is the process of dividing customers in a given market into 
 The idea of segmentation in marketing is not a new concept. In the 1600s, retailers would segment their customers by wealth. For example, shop owners would hold private showcases of goods in their home for wealthier customers. Also, in the late 1800s, Germany toy manufactuers were using geographic segmentation to produce toy models for specific countries, like American locomotives intended to be sold in the United States.(https://en.wikipedia.org/wiki/Market_segmentation). Segmentation today is also done based on demographics and geography but has adapted to also include behavior and the customer's journey with respect to the buying process. 
 
 ### Problem Statement
-_(approx. 1 paragraph)_
-
-In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
+Creating accurate and useful customer segments can be a daunting task. To create customer segments, a lot of reserach is required and a company may find that they need to conduct a study. This process can be time consuming and expensive. Often times, marketers are able to create simple segments, for example segmenting by country, age, gender, etc. But these segmentations are simple and do not contribute to understanding different segments of customers. 
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
@@ -24,6 +22,8 @@ In this section, the dataset(s) and/or input(s) being considered for the project
 
 ### Solution Statement
 _(approx. 1 paragraph)_
+
+However, by utilizing statistics and machine learning models like K-means clustering, more accurate, complex clusters can be found that also save time and money. Moreover, these clusters that would not have
 
 In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
 
