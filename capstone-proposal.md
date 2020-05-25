@@ -3,17 +3,14 @@ find segmentations that were previously unknown - benchmark
 
 
 # Machine Learning Engineer Nanodegree
-## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
-
-## Proposal
-_(approx. 2-3 pages)_
+## Market Segmentation Capstone Proposal
+Mani Singh  
+June 01, 2020
 
 ### Domain Background
-_(approx. 1-2 paragraphs)_
+Market segmentation is the process of dividing customers in a given market into groups based on common attributes. This is significant in marketing because it allows for personalization and more accurate targeting in advertising campaigns. Personalization is staritng to become necessary in marketing with 74% of customers expressing frustration when website content is not personalized.(https://www.business2community.com/marketing/10-surprising-stats-personalization-01791432#M7UP7gMEHj4QOfXm.97). Moreover, 59% of customers say that personalization influences their purchasing decision.(https://www.evergage.com/blog/consumers-want-personalization-stats-roundup/). Instead of a generic, one size fits all offer, the statistics show that marketing should harness the power of personalization to provide targeted advertising to customers. 
 
-In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
+The idea of segmentation in marketing is not a new concept. In the 1600s, retailers would segment their customers by wealth. For example, shop owners would hold private showcases of goods in their home for wealthier customers. Also, in the late 1800s, Germany toy manufactuers were using geographic segmentation to produce toy models for specific countries, like American locomotives intended to be sold in the United States.(https://en.wikipedia.org/wiki/Market_segmentation). Segmentation today is also done based on demographics and geography but has adapted to also include behavior and the customer's journey with respect to the buying process. 
 
 ### Problem Statement
 _(approx. 1 paragraph)_
