@@ -21,20 +21,17 @@ There are four data files that will be used in this project and they were all pr
 Collectively, the features of all four datasets are categorical. The files "Udacity_AZDIAS_052018.csv" and "Udacity_CUSTOMERS_052018.csv" will be used in unsupervised learning methods in order to create customer segments. These two datasets are very feature-rich which means the customer segments will give insight into the different types of groups that are customers of the company as well as their similarities with the general population. The last two files will be used to create a supervised learning model based on the customer segments. Specifically, the "Udacity_MAILOUT_052018_TRAIN.csv" will be used to train the model while the "Udacity_MAILOUT_052018_TEST.csv" will be used to test the model. 
 
 ### Solution Statement
-_(approx. 1 paragraph)_
-
-However, by utilizing statistics and machine learning models like K-means clustering, more accurate, complex clusters can be found that also save time and money. Moreover, these clusters that would not have
-
-In this section, clearly describe a solution to the problem. The solution should be applicable to the project domain and appropriate for the dataset(s) or input(s) given. Additionally, describe the solution thoroughly such that it is clear that the solution is quantifiable (the solution can be expressed in mathematical or logical terms) , measurable (the solution can be measured by some metric and clearly observed), and replicable (the solution can be reproduced and occurs more than once).
+In order to solve this problem, the first task will be to fit the CUSTOMER data to a clustering model, like K-means. This will yield customer grouping or segments. Clustering will also be used on the AZDIAS data, which fill find groupings for the general population of Germany. Then after analyzing the similarities between these two groupings, a supervised model, like logistic regression, can be used to make predictions. It will be trained on the TRAIN data and evaluated on the TEST data.
 
 ### Benchmark Model
-_(approximately 1-2 paragraphs)_
-
-In this section, provide the details for a benchmark model or result that relates to the domain, problem statement, and intended solution. Ideally, the benchmark model or result contextualizes existing methods or known information in the domain and problem given, which could then be objectively compared to the solution. Describe how the benchmark model or result is measurable (can be measured by some metric and clearly observed) with thorough detail.
+The benchmark model that will be used is logistic regression. Logistic regression is a fairly simplistic, supervised classifier that can be used to predict whether or not a person becomes a customer. Classification problems can be measured using various metrics like, accuracy, precision, and recall. However, for the benchmark model, just accuracy will be used. Logistic regression models can be prone to overfitting so it is expected that the final supervised model chosen will outperform the benchmark model.
 
 ### Evaluation Metrics
 _(approx. 1-2 paragraphs)_
 
+As mentioned previously, the evaluation metric that will be used is accuracy. Accuracy will be a percentage and has the formula $$
+   Accuracy = Correct Predictions / Total Predictions
+$$
 In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
 
 ### Project Design
