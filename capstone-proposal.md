@@ -17,7 +17,7 @@ Creating accurate and useful customer segments can be a daunting task. To create
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
-
+There are four data files that will be used in this project and they were all provided by Arvato Financial Solutions. The files named "Udacity_AZDIAS_052018.csv" and "Udacity_CUSTOMERS_052018.csv" will be used in unsupervised learning methods in order to create customer segments. The last two files will be used to create a supervised learning model based on the customer segments. Specifically, the "Udacity_MAILOUT_052018_TRAIN.csv" will be used to train the model while the "Udacity_MAILOUT_052018_TEST.csv" will be used to test the model. 
 In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
 
 ### Solution Statement
