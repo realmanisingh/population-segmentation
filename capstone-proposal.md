@@ -27,12 +27,7 @@ In order to solve this problem, the first task will be to fit the CUSTOMER data 
 The benchmark model that will be used is logistic regression. Logistic regression is a fairly simplistic, supervised classifier that can be used to predict whether or not a person becomes a customer. Classification problems can be measured using various metrics like, accuracy, precision, and recall. However, for the benchmark model, just accuracy will be used. Logistic regression models can be prone to overfitting so it is expected that the final supervised model chosen will outperform the benchmark model.
 
 ### Evaluation Metrics
-_(approx. 1-2 paragraphs)_
-
-As mentioned previously, the evaluation metric that will be used is accuracy. Accuracy will be a percentage and has the formula $$
-   Accuracy = Correct Predictions / Total Predictions
-$$
-In this section, propose at least one evaluation metric that can be used to quantify the performance of both the benchmark model and the solution model. The evaluation metric(s) you propose should be appropriate given the context of the data, the problem statement, and the intended solution. Describe how the evaluation metric(s) are derived and provide an example of their mathematical representations (if applicable). Complex evaluation metrics should be clearly defined and quantifiable (can be expressed in mathematical or logical terms).
+As mentioned previously, the evaluation metric that will be used is accuracy. Accuracy will be a percentage and has the formula $\frac{\text{Number of Correct Predictions}}{\text{Number of Predictions}}$. The outcome variable of the supervised model is whether or not a person becomes a customer, which can be encoded with 1 or 0, where "1" is the person becomes a customer and "0" is they do not become a customer. Calculating the number of correct predictions would simply be getting the equality between the predicted vector and the actual vector. The number of predictions can be calculated by getting the length of the prediction vector. 
 
 ### Project Design
 _(approx. 1 page)_
