@@ -16,7 +16,7 @@ There are four data files that will be used in this project and they were all pr
 
 Collectively, the features of all four datasets are categorical. The files "Udacity_AZDIAS_052018.csv" and "Udacity_CUSTOMERS_052018.csv" will be used in unsupervised learning methods in order to create customer segments. These two datasets are very feature-rich which means the customer segments will give insight into the different types of groups that are customers of the company as well as their similarities with the general population. The last two files will be used to create a supervised learning model based on the customer segments. Specifically, the "Udacity_MAILOUT_052018_TRAIN.csv" will be used to train the model while the "Udacity_MAILOUT_052018_TEST.csv" will be used to test the model. 
 
-In the data, there were six columns whose columns had more than 25% null values. These columns were removed since too many values were missing. 
+In the data, there were six columns whose columns had more than 25% null values. These columns were removed from each dataframe since too many values were missing. 
 
 ### Solution Statement
 In order to solve this problem, the first task will be to fit the CUSTOMER data to a clustering model, like K-means. This will yield customer grouping or segments. Clustering will also be used on the AZDIAS data, which fill find groupings for the general population of Germany. Then after analyzing the similarities between these two groupings, a supervised model, like logistic regression, can be used to make predictions. It will be trained on the TRAIN data and evaluated on the TEST data.
