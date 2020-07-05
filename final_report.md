@@ -13,18 +13,23 @@ In the marketing industry, there's an old saying that marketers waste half of th
 In this project, I created a machine learning model that can predict whether or not a recipient of a marketing campaign will become a customer. I also used machine learning techniques to identify different customer segments along with the variables that best describe the segments. The models are trained using data from a mail-order sales company in Germany provided by Bertelsmann/Arvato and is accessed through Udacity.
 
 ### Problem Statement
-The project can be split into two main parts: unsupervised learning and supervised learning. However, before working on each part of the task, the following tasks must be performed:
+The project can be split into two main parts: unsupervised learning and supervised learning. However, before working on each part, the following tasks must be performed:
 
 1. Download the general population, customer, training, and test data from Udacity.
 2. Clean the data so that it can be used for analysis and training machine learning models.
 3. Perform data analysis to increase familiarity with the data and discover interesting trends
 
+After these tasks are completed, the unsupervised learning portion of the project can be completed, which includes the following steps:
 
+1. Reduce the dimensionality of the customer data and general population data.
+2. Use the k-means clustering machine learning algorithm to create segments in the customer data and the general population data.
+3. Create a visualization that shows the most influential principal components for every cluster and then relate those principal components back to the features in order to learn what features make up each cluster.
 
-In this section, you will want to clearly define the problem that you are trying to solve, including the strategy (outline of tasks) you will use to achieve the desired solution. You should also thoroughly discuss what the intended solution will be for this problem. Questions to ask yourself when writing this section:
-- _Is the problem statement clearly defined? Will the reader understand what you are expecting to solve?_
-- _Have you thoroughly discussed how you will attempt to solve the problem?_
-- _Is an anticipated solution clearly defined? Will the reader understand what results you are looking for?_
+The last part of the project will be training a machine learning model that can accurately predict whether or not a recipient of a marketing campaign will become a customer. The tasks for this part include:
+
+1. Balancing the dataset so that the model has enough positive observations to learn from.
+2. Use cross validation to compare the generalized performance of many different models.
+3. Perform hyperparameter tuning and feature selection for the best models
 
 ### Metrics
 In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
