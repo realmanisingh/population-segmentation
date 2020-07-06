@@ -4,7 +4,6 @@ Mani Singh
 December 31st, 2050
 
 ## I. Definition
-_(approx. 1-2 pages)_
 
 ### Project Overview
 In the marketing industry, there's an old saying that marketers waste half of their money. While this may be hyperbole, a study conducted by Rakuten Marketing reveals that marketers waste on average 26% of their budgets on ineffective channels and strategies.[^1] However, with advancements in artificial intelligence, marketers may be able to create better customer segments and accurately predict whether or not those exposed to their marketing campaign will become a customer.
@@ -38,16 +37,13 @@ Accuracy is a common metric used for binary classification problems and it measu
 
 $accuracy = \frac{\text{true positives} + \text{true negatives}}{\text{number of observations}}$
 
-Recall is a metric that measures percentage of actual positives that were classified correctly. In this case, it would represent the percentage of recipients of the marketing campaigns who became customers that were classified correctly by the supervised model. This metric is very significant because it essentially reveals how well the model is able predict potential customers. In order to achieve a high recall, the goal is to create a model that accurately predicts potential customers therfore reducing the number of false negatives. From a business standpoint, false negatives are not ideal because that means that the model did not identify people who would have likely became customers after being exposed to an marketing campaign.
+Recall is a metric that measures percentage of actual positives that were classified correctly. In this case, it would represent the percentage of recipients of the marketing campaigns who became customers that were classified correctly by the supervised model. In order to achieve a high recall, the goal is to create a model that accurately predicts potential customers therfore reducing the number of false negatives. From a business standpoint, false negatives are not ideal because that means that the model did not identify people who would have likely became customers after being exposed to an marketing campaign.
 
 $recall = \frac{\text{true positives}}{\text{true positives} + \text{false negatives}}$
 
-Precision is a metric that measures 
+Precision is a metric that measures the percentage of observations classified as positive by the model that were actually positive. A  high precision would mean minimizing the number of false positives. For this problem, that means minimizing the number of people that are  incorrectly classified as becoming customers.
 
-In this section, you will need to clearly define the metrics or calculations you will use to measure performance of a model or result in your project. These calculations and metrics should be justified based on the characteristics of the problem and problem domain. Questions to ask yourself when writing this section:
-- _Are the metrics you’ve chosen to measure the performance of your models clearly discussed and defined?_
-- _Have you provided reasonable justification for the metrics chosen based on the problem and solution?_
-
+$precision = \frac{\text{true positives}}{\text{true positives} + \text{false positives}}$
 
 ## II. Analysis
 _(approx. 2-4 pages)_
