@@ -35,20 +35,22 @@ There will be three metrics used to evaluate the supervised learning model: accu
 
 Accuracy is a common metric used for binary classification problems and it measures the percentage of observations that were correctly classified. 
 
-$accuracy = \frac{\text{true positives} + \text{true negatives}}{\text{number of observations}}$
+$$accuracy = \frac{\text{true positives} + \text{true negatives}}{\text{number of observations}}$$
 
 Recall is a metric that measures percentage of actual positives that were classified correctly. In this case, it would represent the percentage of recipients of the marketing campaigns who became customers that were classified correctly by the supervised model. In order to achieve a high recall, the goal is to create a model that accurately predicts potential customers therfore reducing the number of false negatives. From a business standpoint, false negatives are not ideal because that means that the model did not identify people who would have likely became customers after being exposed to an marketing campaign.
 
-$recall = \frac{\text{true positives}}{\text{true positives} + \text{false negatives}}$
+$$recall = \frac{\text{true positives}}{\text{true positives} + \text{false negatives}}$$
 
 Precision is a metric that measures the percentage of observations classified as positive by the model that were actually positive. A  high precision would mean minimizing the number of false positives. For this problem, that means minimizing the number of people that are  incorrectly classified as becoming customers.
 
-$precision = \frac{\text{true positives}}{\text{true positives} + \text{false positives}}$
+$$precision = \frac{\text{true positives}}{\text{true positives} + \text{false positives}}$$
 
 ## II. Analysis
 _(approx. 2-4 pages)_
 
 ### Data Exploration
+The data provided by Bertelsmann/Arvato consists for four different datasets that each contain over 300 features. The largest of the datasets is the general population data (891,211 observations). The next largest dataset is the customer data (191,652 observations). The training data and test data both contain about 43,000 observations. 
+
 In this section, you will be expected to analyze the data you are using for the problem. This data can either be in the form of a dataset (or datasets), input data (or input files), or even an environment. The type of data should be thoroughly described and, if possible, have basic statistics and information presented (such as discussion of input features or defining characteristics about the input or environment). Any abnormalities or interesting qualities about the data that may need to be addressed have been identified (such as features that need to be transformed or the possibility of outliers). Questions to ask yourself when writing this section:
 - _If a dataset is present for this problem, have you thoroughly discussed certain features about the dataset? Has a data sample been provided to the reader?_
 - _If a dataset is present for this problem, are statistics about the dataset calculated and reported? Have any relevant results from this calculation been discussed?_
@@ -145,3 +147,6 @@ In this section, you will need to provide discussion as to how one aspect of the
 - Are all the resources used for this project correctly cited and referenced?
 - Is the code that implements your solution easily readable and properly commented?
 - Does the code execute without error and produce results similar to those reported?
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
