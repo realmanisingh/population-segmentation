@@ -54,6 +54,13 @@ The data provided by Bertelsmann/Arvato consists for four different datasets tha
 The columns of every dataset are categorical with most of the categorical columns already encoded to a numerical scale. The data also contains many null values, like the 'CAMEO_DEUG_2015' that is missing 98979 observations. There were also three columns whose values were over 95% null. In addition to null values, there are a few columns that still contain strings instead of numbers so they will need to be encoded. Also, in the 'CAMEO_DEUG_2015' and 'CAMEO_INTL_2015' columns, there are occurences of the value 'X' and 'XX'. These were not mentioned in the dataset descriptions and it is not known whether or not they are missing. Another issue that exists specifically in the training data is the large imbalance between the positive responses and the negative responses. Only 1.24% of the responses are positive. This will make it difficult for machine learning models to learn how to classify positive instances which will lead to lower recall. 
 
 ### Exploratory Visualization
+The plot below shows a histogram of the response variable. This is helpful for visualizing any class imbalance that may be present in the response variable.
+
+![Distribution of Responses](images/responses_hist.png)
+
+**Fig. 1** A plot showing how the responses of the recipients of a marketing campaign are distributed. 0 indicates that the person who was exposed to the marketing campaign did not become a customer while 1 indicates that the person did become a customer. The bar plot shows that there is a large imbalance between the positive and negative class. However, this makes sense because the average conversion rate for mail order campaigns is generally 1/2 to 2 percent.[^2]
+[^2]: This is the second footnote.
+
 In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
 - _Have you visualized a relevant characteristic or feature about the dataset or input data?_
 - _Is the visualization thoroughly analyzed and discussed?_
