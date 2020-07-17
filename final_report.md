@@ -61,6 +61,16 @@ The plot below shows a histogram of the response variable. This is helpful for v
 **Fig. 1** A plot showing how the responses of the recipients of a marketing campaign are distributed. 0 indicates that the person who was exposed to the marketing campaign did not become a customer while 1 indicates that the person did become a customer. The bar plot shows that there is a large imbalance between the positive and negative class. However, this makes sense because the average conversion rate for mail order campaigns is generally 1/2 to 2 percent.[^2]
 [^2]: This is the second footnote.
 
+**Fig. 2** The following plot shows the response rate for different age groups. This information is helpful for analyzing features that are potentially predictive or correlated with the response variable. For example, if the graph showed that the younger age groups have higher response rates, it can be concluded that age groups would be a good variable to include in the models since it has a relationship with the response variable. 
+
+![Response rate for different age groups](images/age_responses.png)
+
+When analyzing the relationship between age groups and the response variable, it is important that the response rate is used instead of the total number of responses for each age group. As evidenced in the histogram below for the age groups, all the age groups are not evenly distributed. 
+
+![Distribution of Responses](images/age_distribution.png)
+
+For example, -1, which indicates that the age group is missing, could have a higher number of positive responses than age group 0 due to the fact that it there are more people who do not have an indicated age group. However, using a percentage mitigates this effect.
+
 In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
 - _Have you visualized a relevant characteristic or feature about the dataset or input data?_
 - _Is the visualization thoroughly analyzed and discussed?_
