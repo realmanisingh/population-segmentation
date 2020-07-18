@@ -46,7 +46,6 @@ Precision is a metric that measures the percentage of observations classified as
 $$precision = \frac{\text{true positives}}{\text{true positives} + \text{false positives}}$$
 
 ## II. Analysis
-_(approx. 2-4 pages)_
 
 ### Data Exploration
 The data provided by Bertelsmann/Arvato consists for four different datasets that each contain over 300 features. The largest of the datasets is the general population data (891,211 observations). The next largest dataset is the customer data (191,652 observations). The training data and test data both contain about 43,000 observations. 
@@ -71,16 +70,12 @@ When analyzing the relationship between age groups and the response variable, it
 
 For example, -1, which indicates that the age group is missing, could have a higher number of positive responses than age group 0 due to the fact that it there are more people who do not have an indicated age group. However, using a percentage mitigates this effect.
 
-In this section, you will need to provide some form of visualization that summarizes or extracts a relevant characteristic or feature about the data. The visualization should adequately support the data being used. Discuss why this visualization was chosen and how it is relevant. Questions to ask yourself when writing this section:
-- _Have you visualized a relevant characteristic or feature about the dataset or input data?_
-- _Is the visualization thoroughly analyzed and discussed?_
-- _If a plot is provided, are the axes, title, and datum clearly defined?_
-
 ### Algorithms and Techniques
-In this section, you will need to discuss the algorithms and techniques you intend to use for solving the problem. You should justify the use of each one based on the characteristics of the problem and the problem domain. Questions to ask yourself when writing this section:
-- _Are the algorithms you will use, including any default variables/parameters in the project clearly defined?_
-- _Are the techniques to be used thoroughly discussed and justified?_
-- _Is it made clear how the input data or datasets will be handled by the algorithms and techniques chosen?_
+For the unsupervised learning portion of the project, the goal is to create effective customer segments. In order to achieve this, k-means clustering will be used to group the customer data into different clusters that are each defined by a set of features. Like many machine learning algorithms, k-means is most effective when it is trained on a lot of data. Additionally, it is good to reduce the dimensionality of the data because as the number of features increases, the noise in the dataset increases which makes it harder to create good clusters. A good cluster is one where all the point within the cluster are close to each other but the cluster itself is not close to any other cluster. While the k-means clustering algorithm takes as input many hyperparameters, the one that will be tuned and optimized will be k, the number of clusters. 
+
+For the supervised learning portion of the project, the problem at hand is a binary classfication problem which means many different algorithms can be used to predict whether or not a marketing campaign recipient will become a customer. These algorithms include logistic regression, random forest, gradient boosting machines(GBM), extreme gradient boosting machines(XGBoost), naive bayes, and support vector machines(SVM). Each of these algorithms use a different set of hyperparameters that can be tuned to boost model performance. 
+
+In order to train the supervised models mentioned above, the training data will be given as input to the models and they will all be trained with the default values for the hyperparameters. The best performing models will then be selected and hyperparameter tuning can be used to improve their performance.
 
 ### Benchmark
 In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
