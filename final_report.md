@@ -78,15 +78,33 @@ For the supervised learning portion of the project, the problem at hand is a bin
 In order to train the supervised models mentioned above, the training data will be given as input to the models and they will all be trained with the default values for the hyperparameters. The best performing models will then be selected and hyperparameter tuning can be used to improve their performance.
 
 ### Benchmark
-In this section, you will need to provide a clearly defined benchmark result or threshold for comparing across performances obtained by your solution. The reasoning behind the benchmark (in the case where it is not an established result) should be discussed. Questions to ask yourself when writing this section:
-- _Has some result or value been provided that acts as a benchmark for measuring performance?_
-- _Is it clear how this result or value was obtained (whether by data or by hypothesis)?_
+The benchmark used for supervised learning portion of the project is the logistic regression model. The logistic regression model is simple so it provides a measurable baseline that can be used in comparison with more powerful algorithms like XGBoost. In the end, the final model should outperform the benchmark model. Some of the hyperparameters and their values are shown below.
 
+- penalty - "l2"
+- tol - 1e-4
+- class_weight - "balanced"
+- solver - "saga"
+- max_iter - 5000
+
+After training the logistic regression model on the training data, the evaluation metrics were calculated on the training data and are shown below.
+
+- accuracy - 69.28%
+- recall - 60.34%
+- precision - 2.41%
+
+From the evaluation metrics, we see that the baseline model performed pretty poorly. It is evident from the low precision that the model is having trouble identifying false positives so this will need to be addressed when creating the final model. 
 
 ## III. Methodology
 _(approx. 3-5 pages)_
 
 ### Data Preprocessing
+The preprocessing and data cleaning steps done in the "data_cleaning" notebook consist of the following steps:
+
+1. Replacing missing data with the value -1. This essentially places missing data in it's own category and is a favorable method over data imputation since it does not introduce bias into the data.
+2. Encoding the "X" and "XX" values found in the "CAMEO_DEUG_2015" and "CAMEO_INTL_2015" columns. The machine learning models used in this project do not take in strings as input so "X" and "XX" were encoded with 10 and 56 respectively.
+3. Removing columns whose values are more than 95% null. Columns that have too many null values make are troublesome because the rows with null values cannot be removed since that would mean deleting 95% of the data. On the other hand, if we decide to impute the null values, that would introduce too much bias into the data.
+4. One-hot encoding the "CUSTOMER_GROUP" and "PRODUCT_GROUP" columns. These are categorical columns where the labels are not ordinal so one-hot encoding is used to present the categorical variables as nominal to the machine learning models. This will ensure the machine learning model does not assume some ordinal relationship between the labels in each column respectively. 
+
 In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
 - _If the algorithms chosen require preprocessing steps like feature selection or feature transformations, have they been properly documented?_
 - _Based on the **Data Exploration** section, if there were abnormalities or characteristics that needed to be addressed, have they been properly corrected?_
