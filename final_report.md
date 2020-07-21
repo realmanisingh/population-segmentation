@@ -105,6 +105,8 @@ The preprocessing and data cleaning steps done in the "data_cleaning" notebook c
 3. Removing columns whose values are more than 95% null. Columns that have too many null values make are troublesome because the rows with null values cannot be removed since that would mean deleting 95% of the data. On the other hand, if we decide to impute the null values, that would introduce too much bias into the data.
 4. One-hot encoding the "CUSTOMER_GROUP" and "PRODUCT_GROUP" columns. These are categorical columns where the labels are not ordinal so one-hot encoding is used to present the categorical variables as nominal to the machine learning models. This will ensure the machine learning model does not assume some ordinal relationship between the labels in each column respectively. 
 
+After these preprocessing steps were complete, the cleaned data was exported to csv files and then used for modeling. 
+
 In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
 - _If the algorithms chosen require preprocessing steps like feature selection or feature transformations, have they been properly documented?_
 - _Based on the **Data Exploration** section, if there were abnormalities or characteristics that needed to be addressed, have they been properly corrected?_
