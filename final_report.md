@@ -107,12 +107,16 @@ The preprocessing and data cleaning steps done in the "data_cleaning" notebook c
 
 After these preprocessing steps were complete, the cleaned data was exported to csv files and then used for modeling. 
 
-In this section, all of your preprocessing steps will need to be clearly documented, if any were necessary. From the previous section, any of the abnormalities or characteristics that you identified about the dataset will be addressed and corrected here. Questions to ask yourself when writing this section:
-- _If the algorithms chosen require preprocessing steps like feature selection or feature transformations, have they been properly documented?_
-- _Based on the **Data Exploration** section, if there were abnormalities or characteristics that needed to be addressed, have they been properly corrected?_
-- _If no preprocessing is needed, has it been made clear why?_
-
 ### Implementation
+The implementation process can be split into two stages:
+
+1. The unsupervised clustering stage 
+2. The supervised classifier stage
+
+In the first stage, a clustering model was trained on the customer data. However, before training the k-means clustering model, it was necessary to reduce the dimensionality of the data. This is because high dimensionality data has a lot of noise which makes it harder for the model to create good clusters. So to reduce the number of columns, principal component analysis (PCA) was used. PCA provides a tradeoff between variance and dimensionality. The goal is preserve as much variance as possible while also making a significant reduction in the dimensionality. An elbow graph is often used to visualize the point at which the reduction of variance is worth the decrease in dimensionality. The elbow graph for the PCA model fitted to the customer data is shown below.
+
+![Distribution of Responses](images/variance_plot.png)
+
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
