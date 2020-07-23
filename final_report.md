@@ -117,6 +117,8 @@ In the first stage, a clustering model was trained on the customer data. However
 
 ![Distribution of Responses](images/variance_plot.png)
 
+From the graph, we can see that the cumulative explained variance increases at a fast rate until the number of principal components is equal to 2. After this, the cumulative explained variance increases steadily until it converges at 1. In this case, four will be the optimal number of principal components since the change in cumulative explained variance after 4 is very small.
+
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
