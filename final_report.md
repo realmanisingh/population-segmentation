@@ -127,12 +127,25 @@ where, y is the mean distance to the other instances in the same cluster and x i
 
 ![Distribution of Responses](images/distortion_plot.png)
 
+ Although the elbow in the graph above is not as well defined as the variance plot, it is still clear that four clusters is optimal. After four clusters, there is a sharp decrease in the mean Silhouette Score and then the mean Silhouette Score continues to decrease steadily. 
+
+ After finding the optimal number of clusters, all the components needed to train the final k-means clustering model have been found. Due to the large size of the data, the MiniBatchKMeans algorithm from the Scikit-learn library will be used instead of the traditional KMeans algorithm. The purpose of the MiniBatchKMeans algorithm is to speed up the computation time by training on a random subset of the data during each iteration. The "n_clusters" hyperparameter for the MiniBatchKMeans algorithm will be set to four and it will be trained on the dimensionality reduced data. 
+
+ Because the data given to the MiniBatchKMeans algorithm has four dimensions, the clusters cannot be visualized on a traditional graph since we can only visualize in three dimensions. However, a heatmap can be used to visualize the clusters. The "cluster_centers_" attribute of the fitted models stores the coordinates of each cluster with respect to the four principal components. This attribute can then be used to create a heatmap where the location of a cluster relative to a principal component can be described numerically. The heatmap for the MiniBatchKMeans model is shown below.
+
+![Distribution of Responses](images/heatmap.png)
+
+
+
+
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
 - _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
 - _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
 
 ### Refinement
+Because accuracy metrics for unsupervised learning are not quantifiable, improving the models involved experimenting with different hyperparameters and techniques. For example, the k-means clustering algorithm was run using two different reduced datasets. One dataset was not normalized before PCA dimensionality reduction while the other one was. The non-normalized dataset 
+
 In this section, you will need to discuss the process of improvement you made upon the algorithms and techniques you used in your implementation. For example, adjusting parameters for certain models to acquire improved solutions would fall under the refinement category. Your initial and final solutions should be reported, as well as any significant intermediate results as necessary. Questions to ask yourself when writing this section:
 - _Has an initial solution been found and clearly reported?_
 - _Is the process of improvement clearly documented, such as what techniques were used?_
