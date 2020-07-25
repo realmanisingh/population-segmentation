@@ -117,7 +117,15 @@ In the first stage, a clustering model was trained on the customer data. However
 
 ![Distribution of Responses](images/variance_plot.png)
 
-From the graph, we can see that the cumulative explained variance increases at a fast rate until the number of principal components is equal to 2. After this, the cumulative explained variance increases steadily until it converges at 1. In this case, four will be the optimal number of principal components since the change in cumulative explained variance after 4 is very small.
+From the graph, we can see that the cumulative explained variance increases at a fast rate until the number of principal components is equal to 2. After this, the cumulative explained variance increases steadily until it converges at 1. In this case, four will be the optimal number of principal components since the change in cumulative explained variance after 4 is very small. Then we fit a PCA model with four principal components to the customer data. The result is a dataframe of size 191,652 by 4 which is a big improvement over the original dataframe of size 191,652 by 364. 
+
+After performing dimensionality reduction, the reduced dataframe can now be used as input in the k-means clustering model. However, it is first necessary to find the optimal number of clusters. Similar to finding the optimal number of principal of components, an elbow graph can be used to find the optimal value of k. Instead of explained variance, the Silhouette Score is used. The Silhouette Score is calculated for each instance and is defined by the following formula:
+
+$$\text{Silhouette Coefficient} = \frac{x-y}{max(x,y)}$$
+
+where, y is the mean distance to the other instances in the same cluster and x is the mean distance to the instances in the next closest cluster. The coefficient is any value in the range $[-1, 1]$. A value close to 1 means that the instance is close to its assigned cluster therefore, it is in the correct cluster. A value close to -1 means that the instance is far from its assigned cluster therefore, it is assigned to the wrong cluster. The following is a an elbow graph for the Silhouette Score as a function of the number of clusters.
+
+![Distribution of Responses](images/distortion_plot.png)
 
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
