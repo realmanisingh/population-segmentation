@@ -135,7 +135,7 @@ where, y is the mean distance to the other instances in the same cluster and x i
 
 ![Distribution of Responses](images/heatmap.png)
 
-
+In the second stage, before training any models, it was necessary to fix the class imbalance of the training data. As mentioned previously, only 1.24% of observations in the training set were positive. This makes it very difficult for machine learning algorithms to learn how to classify positive observations. This idea is supported by the poor performance of the benchmark model, which was trained on the original, imbalanced data.  
 
 
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
