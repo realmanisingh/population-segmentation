@@ -139,7 +139,19 @@ In the second stage, before training any models, it was necessary to fix the cla
 
 ![Distribution of Responses](images/over_hist.png)
 
-The next step was selecting a classification model. There are many different machine learning algorithms for binary classifications so it is necessary to test to see which is the most accurate. 
+The next step was selecting a classification model. There are many different machine learning algorithms for binary classifications so it is necessary to test to see which is the most accurate. To select the most accurate model, 5-fold cross validation was used to evaluate each model. The table below contains the test accuracy for each model after 5-fold cross validation.
+
+| Model               | Test Accuracy | Test Recall | Test Precision |
+| -----------         | -----------   | ----------- | -----------    |
+| Random Forest       | 0.9435        | 0.9104      | 0.9747         |
+| GBM                 | 0.9454        | 0.9136      | 0.9755         |
+| XGBoost             | 0.9456        | 0.9142      | 0.9753         |
+| KNN                 | 0.7219        | 0.9341      | 0.6554         |
+| Naive Bayes         | 0.6477        | 0.7419      | 0.6236         |
+| SVM                 | 0.4996        | 0.4382      | 0.4908         |
+| Logistic Regression | 0.8269        | 0.8291      | 0.8254         |
+
+The table shows that the tree-based models significantly outperform the other models in accuracy, recall, and precision.
 
 In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
 - _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
