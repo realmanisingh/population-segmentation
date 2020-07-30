@@ -151,12 +151,7 @@ The next step was selecting a classification model. There are many different mac
 | SVM                 | 0.4996        | 0.4382      | 0.4908         |
 | Logistic Regression | 0.8269        | 0.8291      | 0.8254         |
 
-The table shows that the tree-based models significantly outperform the other models in accuracy, recall, and precision.
-
-In this section, the process for which metrics, algorithms, and techniques that you implemented for the given data will need to be clearly documented. It should be abundantly clear how the implementation was carried out, and discussion should be made regarding any complications that occurred during this process. Questions to ask yourself when writing this section:
-- _Is it made clear how the algorithms and techniques were implemented with the given datasets or input data?_
-- _Were there any complications with the original metrics or techniques that required changing prior to acquiring a solution?_
-- _Was there any part of the coding process (e.g., writing complicated functions) that should be documented?_
+The table shows that the tree-based models significantly outperform the other models in accuracy, recall, and precision. Given that all three of the tree based models have similar evaluation metrics, just one model cannot be selected. Hyperparameter tuning would need to be done for all models in order to find the most accurate one.
 
 ### Refinement
 Because accuracy metrics for unsupervised learning are not quantifiable, improving the models involved experimenting with different hyperparameters and techniques. For example, the k-means clustering algorithm was run using two different reduced datasets. One dataset was not normalized before PCA dimensionality reduction while the other one was. The non-normalized dataset 
