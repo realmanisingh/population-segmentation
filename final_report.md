@@ -195,6 +195,7 @@ In this section, you will need to provide some form of visualization that emphas
 ### Reflection
 
 The process used for completing this project can be summarized by the following steps:
+
 1. A business problem was clearly understood and defined.
 2. The datasets were downloaded and preprocessed.
 3. Data analysis was performed using the cleaned data.
@@ -205,6 +206,7 @@ The process used for completing this project can be summarized by the following 
 8. A final model was selected based on the best accuracy metrics.
 9. Predictions were made on the final model using the test set.
 
+The most difficult aspect of this project was preprocessing the data. There were many null values, many features, categorical variables with high cardinality, strings that needed to be encoded, and the column names were typed in German. In general, the data was very messy but it provided valuable experience in learning how to clean and work with messy data. 
 
 In this section, you will summarize the entire end-to-end problem solution and discuss one or two particular aspects of the project you found interesting or difficult. You are expected to reflect on the project as a whole to show that you have a firm understanding of the entire process employed in your work. Questions to ask yourself when writing this section:
 - _Have you thoroughly summarized the entire process you used for this project?_
