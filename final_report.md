@@ -193,6 +193,19 @@ In this section, you will need to provide some form of visualization that emphas
 - _If a plot is provided, are the axes, title, and datum clearly defined?_
 
 ### Reflection
+
+The process used for completing this project can be summarized by the following steps:
+1. A business problem was clearly understood and defined.
+2. The datasets were downloaded and preprocessed.
+3. Data analysis was performed using the cleaned data.
+4. Clustering was used to create customer segments.
+5. A benchmark was created for the supervised learning portion.
+6. Model selection was done using 5-fold cross validation.
+7. Hyperparameter tuning and feature selection were performed for the tree-based models.
+8. A final model was selected based on the best accuracy metrics.
+9. Predictions were made on the final model using the test set.
+
+
 In this section, you will summarize the entire end-to-end problem solution and discuss one or two particular aspects of the project you found interesting or difficult. You are expected to reflect on the project as a whole to show that you have a firm understanding of the entire process employed in your work. Questions to ask yourself when writing this section:
 - _Have you thoroughly summarized the entire process you used for this project?_
 - _Were there any interesting aspects of the project?_
