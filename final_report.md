@@ -208,13 +208,7 @@ The process used for completing this project can be summarized by the following 
 
 The most difficult aspect of this project was preprocessing the data. There were many null values, many features, categorical variables with high cardinality, strings that needed to be encoded, and the column names were typed in German. In general, the data was very messy but it provided valuable experience in learning how to clean and work with messy data. 
 
-When it comes to the most interesting part of the project, it would have to be the fact that hyperparameter tuning and feature selection did not increase the accuracy of the model. These two steps are frequenly used to increase model accuracy but it was unsuccessful for this project. 
-
-In this section, you will summarize the entire end-to-end problem solution and discuss one or two particular aspects of the project you found interesting or difficult. You are expected to reflect on the project as a whole to show that you have a firm understanding of the entire process employed in your work. Questions to ask yourself when writing this section:
-- _Have you thoroughly summarized the entire process you used for this project?_
-- _Were there any interesting aspects of the project?_
-- _Were there any difficult aspects of the project?_
-- _Does the final model and solution fit your expectations for the problem, and should it be used in a general setting to solve these types of problems?_
+When it comes to the most interesting part of the project, it would have to be the fact that feature selection did not increase the accuracy of the model. Feature selection is frequenly used to increase model accuracy but it was unsuccessful for this project. The reasoning for this was explained previously in the "Free-Form Visualization" section but to summarize, most of the features had very similar values for feature importance. This means that they contributed fairly equally to the model's ability to make accurate predictions so removing features would hinder model performance. 
 
 ### Improvement
 In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
