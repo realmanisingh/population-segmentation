@@ -95,7 +95,6 @@ After training the logistic regression model on the training data, the evaluatio
 From the evaluation metrics, we see that the baseline model performed pretty poorly. It is evident from the low precision that the model is having trouble identifying false positives so this will need to be addressed when creating the final model. 
 
 ## III. Methodology
-_(approx. 3-5 pages)_
 
 ### Data Preprocessing
 The preprocessing and data cleaning steps done in the "data_cleaning" notebook consist of the following steps:
@@ -161,10 +160,9 @@ For the supervised learning portion, refinement was focused primarily on hyperpa
 After feature selection, hyperparameter tuning was done for the random forest, GBM, and XGBoost models. The hyperparameter tuning was peformed in two steps: randomized search and then grid search. The Scikit-learn implementation for randomized search allows for the hyperparameter values to be specified and each iteration, a random sample of the hyperparameters will be used to train and evaluate the model. On the otherhand, hyperparameter tuning using grid search tries every combination of values that are specified. This would result in very high time complexity so randomized search is used first to narrow down a range of hyperparameter values and then grid search can be used on the narrowed down range of hyperparameter values. Upon further research, another hyperparameter tuning technique was found: Bayesian hyperparameter tuning. In this technique, hyperparameter values are chosen in an informed manner, meaning that previous results are taken into consideration. This means less time is wasted trying "bad hyperparameters" and more time is spent trying more promising hyperparameter values as determined by the previous results. To determined how well a set of hyperparameters is performing, the roc-auc score is used. Hyperparameter sets that maximize this value are seen as "good". 
 
 ## IV. Results
-_(approx. 2-3 pages)_
 
 ### Model Evaluation and Validation
-After developing the final model, a test set was used to evaluate the final model. The final model, which was trained only on the 62 important features, has the following hyperparameter values:
+After developing the final model, which was XGBoost model, a test set was used to evaluate the final model. The final model, which was trained only on the 62 important features, has the following hyperparameter values:
 
 - booster: "dart"
 - colsample_by_tree: 0.6107022200963952
@@ -175,14 +173,9 @@ After developing the final model, a test set was used to evaluate the final mode
 The test set consisted of 42833 unlabeled observations. To ensure there was no data leakage, the test set was not used when fitting the standard scalar, tuning the hyperparameters, and training the model. The final model was used to make predictions on the test set. The predictions were probabilities that an observation is positive. After obtaining these predictions, the results were submitted to Kaggle and the test set accuracy was calculated: 80.16%. Considering the difficult of the problem and the datasets, this is a very good result. Because no information was provided as to which observations were incorrect, it is not possible to know how robust the model is. 
 
 ### Justification
-In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
-- _Are the final results found stronger than the benchmark result reported earlier?_
-- _Have you thoroughly analyzed and discussed the final solution?_
-- _Is the final solution significant enough to have solved the problem?_
-
+As mentioned in the previous section, the final model achieved an accuracy of 80.16%, which is a significant improve from the baseline model which had an accuracy of 69.28%. The improvement in accuracy can be attributed to several factors, such as the use of a more elaborate model, hyperparameter tuning, and feature selection. Another great result of the final model was that after feature selection, the feature space was reduced from 358 features to 62. This means the final model is not only accurate, but interpretable. For these reasons, I believe the final model is a better solution than the established benchmark and therefore better solves the problem of predicting future customers based on being a recipient of an advertising campaign. 
 
 ## V. Conclusion
-_(approx. 1-2 pages)_
 
 ### Free-Form Visualization
 
