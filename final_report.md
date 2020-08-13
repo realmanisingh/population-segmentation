@@ -164,11 +164,15 @@ After feature selection, hyperparameter tuning was done for the random forest, G
 _(approx. 2-3 pages)_
 
 ### Model Evaluation and Validation
-In this section, the final model and any supporting qualities should be evaluated in detail. It should be clear how the final model was derived and why this model was chosen. In addition, some type of analysis should be used to validate the robustness of this model and its solution, such as manipulating the input data or environment to see how the model’s solution is affected (this is called sensitivity analysis). Questions to ask yourself when writing this section:
-- _Is the final model reasonable and aligning with solution expectations? Are the final parameters of the model appropriate?_
-- _Has the final model been tested with various inputs to evaluate whether the model generalizes well to unseen data?_
-- _Is the model robust enough for the problem? Do small perturbations (changes) in training data or the input space greatly affect the results?_
-- _Can results found from the model be trusted?_
+After developing the final model, a test set was used to evaluate the final model. The final model, which was trained only on the 62 important features, has the following hyperparameter values:
+
+- booster: "dart"
+- colsample_by_tree: 0.6107022200963952
+- learning_rate: 0.0671955731189981
+- max_depth: 3
+- reg_lambda: 0.309023245658252
+
+The test set consisted of 42833 unlabeled observations. To ensure there was no data leakage, the test set was not used when fitting the standard scalar, tuning the hyperparameters, and training the model. The final model was used to make predictions on the test set. The predictions were probabilities that an observation is positive. After obtaining these predictions, the results were submitted to Kaggle and the test set accuracy was calculated: 80.16%. Considering the difficult of the problem and the datasets, this is a very good result. Because no information was provided as to which observations were incorrect, it is not possible to know how robust the model is. 
 
 ### Justification
 In this section, your model’s final solution and its results should be compared to the benchmark you established earlier in the project using some type of statistical analysis. You should also justify whether these results and the solution are significant enough to have solved the problem posed in the project. Questions to ask yourself when writing this section:
@@ -181,6 +185,10 @@ In this section, your model’s final solution and its results should be compare
 _(approx. 1-2 pages)_
 
 ### Free-Form Visualization
+
+
+![Distribution of Responses](images/feature_importance.png)
+
 In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
 - _Have you visualized a relevant or important quality about the problem, dataset, input data, or results?_
 - _Is the visualization thoroughly analyzed and discussed?_
