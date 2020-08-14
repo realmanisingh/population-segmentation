@@ -203,22 +203,9 @@ The most difficult aspect of this project was preprocessing the data. There were
 When it comes to the most interesting part of the project, it would have to be the fact that out of the 358 features, online 62 ended up having a feature importance greater than zero. This means that only 17.3% of the features were useful. Only having 62 useful features can be seen as a positive aspect since this makes the model more interpretable. Also, this could help shape future data collection efforts since we know that only 62 features are useful in predicting whether or not a recipient of a marketing campaign will convert.
 
 ### Improvement
-In this section, you will need to provide discussion as to how one aspect of the implementation you designed could be improved. As an example, consider ways your implementation can be made more general, and what would need to be modified. You do not need to make this improvement, but the potential solutions resulting from these changes are considered and compared/contrasted to your current solution. Questions to ask yourself when writing this section:
-- _Are there further improvements that could be made on the algorithms or techniques you used in this project?_
-- _Were there algorithms or techniques you researched that you did not know how to implement, but would consider using if you knew how?_
-- _If you used your final solution as the new benchmark, do you think an even better solution exists?_
+In order to easily obtain useful insight from the model, it should be deployed as an API endpoint. Instead of manually having to go into a Python script and giving the prediction method new input data, having the model deployed as an API endpoint can help automate this process. This could be done using a cloud platform like Amazon Web Services, Microsoft Azure, or the Google Cloud Platform.
 
------------
-
-**Before submitting, ask yourself. . .**
-
-- Does the project report you’ve written follow a well-organized structure similar to that of the project template?
-- Is each section (particularly **Analysis** and **Methodology**) written in a clear, concise and specific fashion? Are there any ambiguous terms or phrases that need clarification?
-- Would the intended audience of your project be able to understand your analysis, methods, and results?
-- Have you properly proof-read your project report to assure there are minimal grammatical and spelling mistakes?
-- Are all the resources used for this project correctly cited and referenced?
-- Is the code that implements your solution easily readable and properly commented?
-- Does the code execute without error and produce results similar to those reported?
+However, a more cost effective solution would be to use a micro web framework like Flask, which allows for easy API development using Python. After the model is deployed to an API endpoint, an ETL pipeline can then feed data to the endpoint and the endpoint will return the predictions. 
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });</script>
