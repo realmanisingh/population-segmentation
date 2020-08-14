@@ -1,13 +1,13 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Project
 Mani Singh  
-December 31st, 2050
+August 14th, 2020
 
 ## I. Definition
 
 ### Project Overview
 In the marketing industry, there's an old saying that marketers waste half of their money. While this may be hyperbole, a study conducted by Rakuten Marketing reveals that marketers waste on average 26% of their budgets on ineffective channels and strategies.[^1] However, with advancements in artificial intelligence, marketers may be able to create better customer segments and accurately predict whether or not those exposed to their marketing campaign will become a customer.
-[^1]: This is the first footnote.
+[^1]: Benes, R. (2018, March 23). Marketers Waste About One-Fourth of Their Budgets. Retrieved August 14, 2020, from https://www.emarketer.com/content/marketers-waste-about-one-fourth-of-their-budgets
 
 In this project, I created a machine learning model that can predict whether or not a recipient of a marketing campaign will become a customer. I also used machine learning techniques to identify different customer segments along with the variables that best describe the segments. The models are trained using data from a mail-order sales company in Germany provided by Bertelsmann/Arvato and is accessed through Udacity.
 
@@ -58,7 +58,7 @@ The plot below shows a histogram of the response variable. This is helpful for v
 ![Distribution of Responses](images/responses_hist.png)
 
 **Fig. 1** A plot showing how the responses of the recipients of a marketing campaign are distributed. 0 indicates that the person who was exposed to the marketing campaign did not become a customer while 1 indicates that the person did become a customer. The bar plot shows that there is a large imbalance between the positive and negative class. However, this makes sense because the average conversion rate for mail order campaigns is generally 1/2 to 2 percent.[^2]
-[^2]: This is the second footnote.
+[^2]: Richards, J. (2016, October 26). What Is the Average Rate of Return on a Direct Mail Campaign? Retrieved August 14, 2020, from https://smallbusiness.chron.com/average-rate-return-direct-mail-campaign-23974.html
 
 **Fig. 2** The following plot shows the response rate for different age groups. This information is helpful for analyzing features that are potentially predictive or correlated with the response variable. For example, if the graph showed that the younger age groups have higher response rates, it can be concluded that age groups would be a good variable to include in the models since it has a relationship with the response variable. 
 
