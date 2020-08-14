@@ -178,14 +178,11 @@ As mentioned in the previous section, the final model achieved an accuracy of 80
 ## V. Conclusion
 
 ### Free-Form Visualization
-
+The graph below visualizes the feature importance for every feature in the dataet. This feature importance is derived from the Gini importance, which measures how much a feature contributes to decreasing node impurity on average. The graph shows that although there are 358 features, many of them have zero importance, meaning they do not decrease node impurity at all.  
 
 ![Distribution of Responses](images/feature_importance.png)
 
-In this section, you will need to provide some form of visualization that emphasizes an important quality about the project. It is much more free-form, but should reasonably support a significant result or characteristic about the problem that you want to discuss. Questions to ask yourself when writing this section:
-- _Have you visualized a relevant or important quality about the problem, dataset, input data, or results?_
-- _Is the visualization thoroughly analyzed and discussed?_
-- _If a plot is provided, are the axes, title, and datum clearly defined?_
+This observation was very useful because it allowed for the feature space to decrease form 358 to just 62 features. After removing all the features with zero importance, the hyperparameters of the XGBoost model were tuned again and the model was retrained. This increased the accuracy of the model, while also creating a more interpretable model. 
 
 ### Reflection
 
